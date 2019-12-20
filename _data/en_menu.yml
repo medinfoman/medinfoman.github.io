@@ -5,10 +5,10 @@
     - name: NLP latest
       link: /#
       items:
-        - name: BERT from scratch
+        - name: BERT from scratch(under construc)
           link: /#
     - name: NLP convergence
       link: /#
       items:
-        - name: Predicting XXX
+        - name: Predicting XXX(under construc)
           link: /#
