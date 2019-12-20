@@ -1,0 +1,14 @@
+- label: Menu
+  items:
+    - name: Home
+      link: /
+    - name: NLP latest
+      link: /#
+      items:
+        - name: BERT from scratch
+          link: /#
+    - name: NLP convergence
+      link: /#
+      items:
+        - name: Predicting XXX
+          link: /#

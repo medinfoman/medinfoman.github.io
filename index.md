@@ -3,7 +3,7 @@ title: KMK's Natural Language Processing laboratory
 subtitle: Natural language processing in Medical domain
 layout: page
 show_sidebar: false
-menubar: example_menu
+menubar: en_menu
 ---
 
 ## Hello World
