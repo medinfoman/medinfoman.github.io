@@ -1,52 +1,60 @@
 ---
-title: Bulma Clean Theme
-subtitle: This is the demo site for Bulma Clean Theme
+title: Page with Tabs
+subtitle: Demo page with tabs
 layout: page
-callouts: home_callouts
-show_sidebar: true
+show_sidebar: false
+tabs: example_tabs
+menubar: example_menu
 ---
 
-# Bulma Clean Theme demo website
+## Displaying tabs
 
-This website showcases the options for the Bulma Clean theme. The theme is available as a ruby gem or can be used with GitHub pages. 
-
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
-
-## Ruby Gem
-
-The ruby gem is available on the Ruby Gems website at the following location. [https://rubygems.org/gems/bulma-clean-theme](https://rubygems.org/gems/bulma-clean-theme)
-
-## GitHub Pages
-
-The theme can be used with GitHub Pages bu setting the `remote_theme` in your Jekyll sites `_config.yml`
+The tabs gets its content from a data file in your site's `_data` directory. Simply set the name of your data file in the page's menubar setting in the frontmatter.
 
 ```yml
-remote_theme: chrisrhymes/bulma-clean-theme
+title: Page with tabs
+subtitle: Demo page with tabs
+layout: page
+show_sidebar: false
+menubar: example_menu
+tabs: example_tabs
 ```
 
-## Instructions
+Tabs can be used in conjunction with menubar and/or sidebar if you wish.
 
-For full instructions, please see the Readme at the GitHub repo:
-[https://github.com/chrisrhymes/bulma-clean-theme/blob/master/README.md](https://github.com/chrisrhymes/bulma-clean-theme/blob/master/README.md)
+## Creating a tabs data file
 
-## Page Layouts
+Create a data file in the _data directory and use the following format (if using yml)
 
-This demo site showcases the available page layout options.
+```yml
+alignment: is-left
+style: is-boxed
+size: is-large
+items:
+  - name: Tabs
+    link: /page-4/
+    icon: fa-smile-wink
+  - name: Sidebar
+    link: /page-1/
+    icon: fa-square
+  - name: No Sidebar
+    link: /page-2/
+    icon: fa-ellipsis-v
+  - name: Menubar
+    link: /page-3/
+    icon: fa-bars
+```
 
-* Page With Sidebar
-* Page Without Sidebar
-* Page With Menubar
-* Page With Tabs
-* Page Without Footer
-* Page Without Hero
-* Page With Contents
-* Landing Page With Callouts
-* Blog
-* Post
+## Settings
 
-## Supported By JetBrains
+You can control the alignment, style and size of the tabs by using the relevant [Bulma tabs classes](https://bulma.io/documentation/components/tabs/).
 
-JetBrains have kindly provided an Open Source licence to aid in the future development of Bulma Clean Theme.
+## Active Tab Highlighting
 
-[![JetBrains](img/jetbrains-variant-4.svg)](https://www.jetbrains.com/?from=bulma-clean-theme)
+It will automatically mark the active tab based on the current page.
+
+## Icons
+
+You can add icons to your tab by passing in the [Font Awesome icon class](https://fontawesome.com/icons?d=gallery).
+
+If you don't wish to show icons then simply omit the option from your yaml file.
